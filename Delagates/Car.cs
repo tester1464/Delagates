@@ -23,7 +23,9 @@ namespace Delagates
                 {
                     var oldName = _name;
                     _name = value;
+                    //check if nasłuchujący (delegat) isn't null
                     if (NameChanged != null)
+                        //jeśli nie jet to wywołujemy zdarzenie
                         NameChanged(oldName, _name);
                 }
                 
